@@ -34,6 +34,9 @@ public class Board {
 	 */
 	private boolean isValidMove = false;
 
+	/**
+	 * Creates a new board for the game.
+	 */
 	public Board(){
 		//filling up the board so it does not contain any null values
 		for(int x = 0; x < board.length; x++){
@@ -780,7 +783,9 @@ public class Board {
 	}
 
 	/**
-	 * Returns true if player has valid possible moves
+	 * Returns true if player has valid possible moves.
+	 * @param pos
+	 * @param p
 	 * @return
 	 */
 	public boolean validPos(Position pos, Player p){

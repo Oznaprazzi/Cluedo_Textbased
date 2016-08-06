@@ -25,6 +25,7 @@ public class CluedoGame {
 	 * An instance of the board.
 	 */
 	public static Board board; //an instance of the board.
+	
 	/**
 	 * stores the amount of players.
 	 */
@@ -40,6 +41,7 @@ public class CluedoGame {
 	 * Flag for stating whether asking was a success or not.
 	 */
 	public static boolean askSuccess; 
+	
 	/**
 	 * If a player has asked or not.
 	 */
@@ -49,10 +51,12 @@ public class CluedoGame {
 	 * List of sequencial numbers. This allows a random number to be chosen.
 	 */
 	private List<Integer> diceList = new ArrayList<Integer>(Arrays.asList(2,3,4,5,6,7,8,9,10,11,12));
+	
 	/**
 	 * This rolls the dice, obtains the first element in the array.
 	 */
 	private int currentRoll = diceList.get(0);
+	
 	/**
 	 * The current player of the round.
 	 */
@@ -71,10 +75,12 @@ public class CluedoGame {
 
 	/**Stores player's previous option*/
 	private String prevOption = "";
+	
 	/**
 	 * Current accusation object.
 	 */
 	private Accusation accusation = null;
+	
 	/**
 	 * Construct a new instance of the cluedo game. Initialize the fields.
 	 */
@@ -102,7 +108,7 @@ public class CluedoGame {
 
 	/**
 	 * Add new player to current players.
-	 * @param player1
+	 * @param player
 	 */
 	public static void addPlayer(Player player){
 		currentPlayers.add(player);
@@ -160,6 +166,7 @@ public class CluedoGame {
 		System.out.println(art);
 		System.out.println("Welcome to the Cluedo Game.");
 	}
+	
 	/**
 	 * This sets the players position on the game. It places them strategically in a random location each round.
 	 */
@@ -215,6 +222,7 @@ public class CluedoGame {
 			}
 		}
 	}
+	
 	/**
 	 * This method performs a given option, based off the users input.
 	 * m is move, c is current cards, d is show previous player cards, a is accusation and s is for suggestion.
@@ -278,7 +286,8 @@ public class CluedoGame {
 
 	/**
 	 * This makes an accusation.
-	 * @param current Player
+	 * @param p
+	 * @return
 	 */
 	public Suggestion makeSuggestion(Player p){
 		if(!p.isInRoom()){
@@ -336,6 +345,7 @@ public class CluedoGame {
 	/**
 	 * This makes an accusation.
 	 * @param p
+	 * @return
 	 */
 	public Accusation makeAccusation(Player p){
 		System.out.println("-----------ACCUSATION!-------------");
@@ -496,13 +506,13 @@ public class CluedoGame {
 
 	/**
 	 * Indicates an attempt to make an invalid move.
-	 *
 	 */
 	public static class InvalidMove extends Exception {
 		public InvalidMove(String msg) {
 			super(msg);
 		}
 	}
+	
 	/**
 	 * The main method. This must be run/invoked to play the game.
 	 * @param args

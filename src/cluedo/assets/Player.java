@@ -31,10 +31,6 @@ public class Player {
 	 * Create a Player with a given name, a hand, a current character, and their x and y position.
 	 * 
 	 * @param name
-	 * @param c
-	 * @param h
-	 * @param x
-	 * @param y
 	 */
 	public Player(String name){
 		this.name = name;
@@ -54,13 +50,12 @@ public class Player {
 	/**
 	 * This allows the player to move a step.
 	 */
-
 	public void moveAStep(){
 		this.numberofMoves--;
 	}
 	/**
 	 * Returns the amount of moves a player currently has.
-	 * 
+	 * @return
 	 */
 	public int numberofMoves(){
 		return this.numberofMoves;
@@ -105,6 +100,11 @@ public class Player {
 		}
 	}
 	
+	/**
+	 * Set the possible coordinates that a player can go into.
+	 * @param x
+	 * @param y
+	 */
 	private void setPossibleCoords(int x, int y){
 		possibleCoords[0] = new Position(x + 1, y);
 		possibleCoords[1] = new Position(x - 1, y);
@@ -180,6 +180,7 @@ public class Player {
 
 	/**
 	 * Set look back string, in order to remove player's position when moving to another square.
+	 * @param lb
 	 */
 	public void setLookBack(String lb){
 		this.lookback = lb;
@@ -195,12 +196,15 @@ public class Player {
 
 	/**
 	 * Set room that player is in.
+	 * @param rm
 	 */
 	public void setRoom(Room rm){
 		this.room = rm;
 	}
+	
 	/**
 	 * Get room that player is in.
+	 * @return
 	 */
 	public Room getRoom(){
 		return this.room;
@@ -223,7 +227,8 @@ public class Player {
 	}
 	
 	/**
-	 * Set door that player has entered through
+	 * Set door that player has entered through.
+	 * @param dr
 	 */
 	public void setDoor(Door dr){
 		this.door = dr;
@@ -247,11 +252,12 @@ public class Player {
 	
 	/**
 	 * This sets the flag for whether the player is or isn't out.
-	 * @param boolean bool.
+	 * @param b
 	 */
 	public void setOut(boolean b) {
 		this.out  = b;
 	}
+
 	/**
 	 * Returns the toString representation of this player.
 	 */

@@ -18,6 +18,7 @@ public class Position {
 		this.x = x;
 		this.y = y;
 	}
+	
 	/**
 	 * Retrieves the X value.
 	 * @return
@@ -35,9 +36,6 @@ public class Position {
 	}
 
 	
-	/**
-	 *	Returns a unique hashcode value for this position.
-	 */
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -46,9 +44,7 @@ public class Position {
 		result = prime * result + y;
 		return result;
 	}
-	/**
-	 * Check if this position object is equal with another position object.
-	 */
+	
 	@Override
 	public boolean equals(Object obj) {
 		if(obj instanceof Position){
@@ -58,6 +54,7 @@ public class Position {
 		}
 		return false;
 	}
+	
 	/**
 	 * Returns a toString representation of this Position.
 	 */

@@ -78,10 +78,14 @@ public class Room {
 		this.name = n;
 	}
 
-
-
 	/**
 	 * Construct a Room with x, y coordinates, its width and height and whether it has stairs or not.
+	 * @param n
+	 * @param x
+	 * @param y
+	 * @param width
+	 * @param height
+	 * @param hS
 	 */
 	public Room(String n, int x, int y, int width, int height, boolean hS){
 		this.name = n;
@@ -118,6 +122,7 @@ public class Room {
 
 	/**
 	 * Add player and position to Map.
+	 * @param p
 	 */
 	public void addPlayer(Player p){
 		Position pos = playerCoords[i];
@@ -215,6 +220,7 @@ public class Room {
 
 	/**
 	 * Returns whether the room has stairs.
+	 * @return
 	 */
 	public boolean hasStairs(){
 		return this.hasStairs;
@@ -222,6 +228,7 @@ public class Room {
 
 	/**
 	 * Returns the room connected.
+	 * @return
 	 */
 	public Room getOtherRoom(){
 		return this.other;
@@ -229,11 +236,20 @@ public class Room {
 
 	/**
 	 * Set room this is connected to this room.
+	 * @param rm
 	 */
 	public void setRoom(Room rm){
 		this.other = rm;
 	}
 
+	/**
+	 * Returns the name of this room formatted nicely.
+	 * @return
+	 */
+	public String stringName(){
+		return "[Room: " + name + "]";
+	}
+	
 	/**
 	 * Returns a toString representation of this Room.
 	 */
@@ -244,12 +260,5 @@ public class Room {
 		}
 		return "[Room: " + name + " | Weapon: null]";
 	}
-	/**
-	 * Returns the name of this room formatted nicely.
-	 * @return
-	 */
-	public String stringName(){
-		return "[Room: " + name + "]";
-	}
-
+	
 }

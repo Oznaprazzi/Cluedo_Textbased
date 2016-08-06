@@ -21,6 +21,14 @@ public class Door {
 	 */
 	private Position inFront;
 	
+	/**
+	 * Creates a new door object.
+	 * @param direction
+	 * @param x
+	 * @param y
+	 * @param rm
+	 * @param s
+	 */
 	public Door(boolean direction, int x, int y, Room rm, String s){
 		this.isHorizontal = direction;
 		this.position = new Position(x, y);
@@ -62,6 +70,7 @@ public class Door {
 	
 	/**
 	 * Returns the room that this door belongs to.
+	 * @return
 	 */
 	public Room getRoom(){
 		return this.room;
@@ -69,6 +78,7 @@ public class Door {
 	
 	/**
 	 * Returns the string of the door.
+	 * @return
 	 */
 	public String getString(){
 		return this.s;

@@ -9,6 +9,7 @@ public class Character {
 	 * The name of this character.
 	 */
 	private String name;
+	
 	/**
 	 * The room that this character object is in (if in a room).
 	 */
@@ -18,6 +19,7 @@ public class Character {
 	 * Stores the player that this character object belongs to.
 	 */
 	private Player player;
+	
 	/**
 	 * Construct a new character with a given name.
 	 * @param name
@@ -52,6 +54,7 @@ public class Character {
 	
 	/**
 	 * Stores the room that this player is in.
+	 * @param rm
 	 */
 	public void addRoom(Room rm){
 		this.room = rm;

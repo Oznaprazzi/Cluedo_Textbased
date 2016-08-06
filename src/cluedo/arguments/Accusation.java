@@ -76,6 +76,7 @@ public class Accusation extends Argument{
 
 	/**
 	 * Returns the String representation of this accusation.
+	 * @return
 	 */
 	@Override
 	public String toString(){

@@ -58,13 +58,4 @@ public class Argument {
 	public Player getCurrentPlayer(){
 		return this.currentPlayer;
 	}
-
-
-
-
-
-	
-	
-	
-	
 }

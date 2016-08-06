@@ -11,6 +11,7 @@ public class Envelope{
 	 * The underlying data structure of the envelope
 	 */
 	private Card[] envelope;
+	
 	/**
 	 * The size of the envelope.
 	 */
@@ -23,7 +24,6 @@ public class Envelope{
 		this.envelope = new Card[3];	
 	}
 	
-	
 	/**
 	 * Gets a specified card at that index.
 	 * @param i
@@ -34,6 +34,7 @@ public class Envelope{
 			return envelope[i]; 
 		}else throw new ArrayIndexOutOfBoundsException("envelope is out of bounds.");
 	}
+	
 	/**
 	 * Adds a card in. If the count is greater than 3, don't do anything. fail silently.
 	 * @param card
@@ -45,6 +46,7 @@ public class Envelope{
 		envelope[count] = card;
 		count++;	
 	}
+	
 	/**
 	 * Returns a copy of the envelope array. Modification of this array does not affect the real envelope.
 	 * @return

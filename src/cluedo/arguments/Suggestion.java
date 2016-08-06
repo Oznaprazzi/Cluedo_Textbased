@@ -31,6 +31,7 @@ public class Suggestion extends Argument {
 	 * @param w
 	 * @param r
 	 * @param c
+	 * @param p
 	 */
 	public Suggestion(WeaponCard w, RoomCard r, CharacterCard c, Player p) {
 		super(w, r, c, p);

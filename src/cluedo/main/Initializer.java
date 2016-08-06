@@ -56,6 +56,7 @@ public class Initializer {
 		fillList();
 		initializeEnvelope();
 	}
+	
 	/**
 	 * Returns the envelope object.
 	 * @return
@@ -63,9 +64,6 @@ public class Initializer {
 	public static Envelope getEnvelope(){
 		return envelope;
 	}
-
-
-
 
 	/**
 	 * Initializes the weapons list.
@@ -219,6 +217,7 @@ public class Initializer {
 
 	/**
 	 * Distribute characters to current players.
+	 * @param currentPlayers
 	 */
 	public void distributeCharacters(List<Player> currentPlayers){
 		Collections.shuffle(characters, new Random(seed)); 
@@ -234,6 +233,10 @@ public class Initializer {
 		}
 	}
 
+	/**
+	 * Distribute cards to players.
+	 * @param currentPlayers
+	 */
 	public void distributeCards(List<Player> currentPlayers){
 		Collections.shuffle(roomCards, new Random(seed)); 
 		Collections.shuffle(weaponCards, new Random(seed)); 
@@ -291,6 +294,10 @@ public class Initializer {
 		return Initializer.characterCards;
 	}
 
+	/**
+	 * Returns the rooms
+	 * @return
+	 */
 	public static List<Room> getRooms(){
 		return Initializer.rooms;
 	}
